@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21d90fb8-cf45-4c02-be8f-a2411947dbdd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/view/exam/ExamWriteEnglish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/exam/ExamWriteVietnam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/exam/ExamSelect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/exam/ExamSelectCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/exam/ExamSelectTop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaDB/Controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/view/ContentAreaMenuMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaDB/view/ContentAreaMenuMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/view/exam/ExamContent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaDB/view/exam/ExamContent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/view/learn/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaDB/view/learn/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/view/learn/LearnContent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaDB/view/learn/LearnContent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/view/learn/LearnWord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaDB/view/learn/LearnWord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/view/search/BtnNone$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaDB/view/search/BtnNone$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/view/search/BtnNone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaDB/view/search/BtnNone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaDB/view/search/CollectionItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaDB/view/search/CollectionItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ContentAreaMenuMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ContentAreaMenuMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/exam/ExamContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/exam/ExamContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/learn/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/learn/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/learn/LearnContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/learn/LearnContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/learn/LearnWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/learn/LearnWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/search/BtnNone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/search/BtnNone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/search/CollectionItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/search/CollectionItem.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,31 +49,37 @@
     <session id="-1898422931">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.77" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4950" />
+          <entry key="java" value="4964" />
+          <entry key="txt" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4950" />
+          <entry key="JAVA" value="4964" />
+          <entry key="PLAIN_TEXT" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="1" />
           <entry key="java" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="JAVA" value="34" />
         </counts>
       </usages-collector>
@@ -102,11 +90,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/exam/ExamSelect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
+            <state relative-caret-position="705">
+              <caret line="50" column="17" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#324#333#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,16 +102,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/exam/ExamSelectCenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="109" column="74" selection-start-line="109" selection-start-column="74" selection-end-line="109" selection-end-column="74" />
+            <state relative-caret-position="1253">
+              <caret line="118" column="48" selection-start-line="118" selection-start-column="48" selection-end-line="118" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
-                <element signature="e#993#994#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,14 +114,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/exam/ExamSelectTop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="240">
               <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#453#454#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
-                <element signature="e#393#394#0" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -249,14 +228,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539507908900" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539508316283" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -364,18 +343,28 @@
       <workItem from="1539442485877" duration="12188000" />
       <workItem from="1539473928701" duration="1357000" />
       <workItem from="1539487737600" duration="6841000" />
-      <workItem from="1539500106689" duration="7657000" />
+      <workItem from="1539500106689" duration="8497000" />
+      <workItem from="1539511558512" duration="598000" />
+      <workItem from="1539514970232" duration="647000" />
     </task>
+    <task id="LOCAL-00001" summary="update lần tiếp">
+      <created>1539507988600</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539507988600</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35651000" />
+    <option name="totallyTimeSpent" value="37736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21515152" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2219697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -384,7 +373,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32682925" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32682925" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -440,6 +429,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update lần tiếp" />
+    <option name="LAST_COMMIT_MESSAGE" value="update lần tiếp" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/view/Card/CardContent.java">
@@ -575,54 +568,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/exam/MyList.java">
+    <entry file="file://$PROJECT_DIR$/src/view/exam/MyList.java" />
+    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.desktop/java/awt/event/ActionListener.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding>
-            <element signature="e#984#985#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/exam/ExamSelect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
+        <state relative-caret-position="705">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#324#333#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/exam/ExamSelectTop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="240">
           <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/exam/ExamSelectCenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="109" column="74" selection-start-line="109" selection-start-column="74" selection-end-line="109" selection-end-column="74" />
+        <state relative-caret-position="1253">
+          <caret line="118" column="48" selection-start-line="118" selection-start-column="48" selection-end-line="118" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
           </folding>
         </state>
       </provider>
