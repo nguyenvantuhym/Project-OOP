@@ -89,10 +89,6 @@ public class Controller implements ActionListener{
             catch (IOException ex) {
                 Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } else if(command.equals("daThuoc"))
-        {
-            LearnWord.getInstance().load();
-            
         }
     }
     

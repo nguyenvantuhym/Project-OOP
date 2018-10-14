@@ -5,9 +5,7 @@
  */
 package view.learn;
 
-import java.awt.Color;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -26,13 +24,20 @@ import view.search.BtnNone;
 public class LearnWord extends JPanel implements ActionListener{
     
     private static LearnWord instance = null;
+    public static LearnWord getInstance()
+    {
+        if(instance == null)
+        {
+            instance = new LearnWord();
+            return instance;
+        }else
+            return instance;
+    }
     
-    public final int WIDTH_ =Card.getInstance().WIDTH_CARD;
-    public final int HEIGHT_ =Card.getInstance().HEIGHT_CARD +70;
-    
-    BtnNone btnGiaiThich =new BtnNone("Xem giải Thích");
-    BtnNone btnThuoc = new BtnNone("Đã Thuộc");
-    
+    public final int WIDTH_ =Card.getInstance().WIDTH_CARD +50;
+    public final int HEIGHT_ =Card.getInstance().HEIGHT_CARD;
+    private BtnNone left = new BtnNone(new ImageIcon("icons/left.png"));
+    private BtnNone right = new BtnNone(new ImageIcon("icons/right.png"));
     ArrayList<String> tiengViet = new  ArrayList();
     ArrayList<String> tienganh = new  ArrayList();
     int index =0;
@@ -40,7 +45,7 @@ public class LearnWord extends JPanel implements ActionListener{
     {
         tiengViet.add("gà");
         tienganh.add("chicken");
-        tiengViet.add("chó");
+        tiengViet.add("chos");
         tienganh.add("dog");
         tiengViet.add("chim");
         tienganh.add("bird");
@@ -50,15 +55,7 @@ public class LearnWord extends JPanel implements ActionListener{
         tienganh.add("pen");
     }
    
-    public static LearnWord getInstance()
-    {
-        if(instance == null)
-        {
-            instance = new LearnWord();
-            return instance;
-        }else 
-            return instance;
-    }
+
     private LearnWord()
     {
         loaddata();
@@ -67,54 +64,63 @@ public class LearnWord extends JPanel implements ActionListener{
     private void init()
     {
         
-        setLayout(null);
+        setLayout(new BorderLayout());
         Border border = LineBorder.createGrayLineBorder();
         setBorder(border);
-        Card.getInstance().setIconCard(new ImageIcon("icons/default_card.png"));
-        //Card.getInstance().set
-        load();
-        Card.getInstance().setBounds(0,0,Card.getInstance().WIDTH_CARD,Card.getInstance().HEIGHT_CARD);
-        
-        
-        //BtnNone btnGiaiThich =new BtnNone("Xem giải Thích");
-        btnGiaiThich.addActionListener(this);
-        
-        
-        btnThuoc.setForeground(Color.white);
-        btnThuoc.setBackground(new Color(0, 123, 255));
-        btnThuoc.setActionCommand("daThuoc");
-        btnThuoc.addActionListener(Controller.Controller.getInstance());
-        
-        
-        JPanel panel = new JPanel(new GridLayout(0,1));
-        
-        panel.add(btnGiaiThich);
-        panel.add(btnThuoc);
-        panel.setBounds(0,Card.getInstance().HEIGHT_CARD,Card.getInstance().WIDTH_CARD,70);
-        add(Card.getInstance());
-        add(panel);
+        setBackground(Color.WHITE);
+        left.addActionListener(this);
+        left.setBackground(Color.WHITE);
+        left.setActionCommand("left");
+        right.addActionListener(this);
+        right.setBackground(Color.WHITE);
+        right.setActionCommand("right");
+        loopLearn();
+
+        add(Card.getInstance(),BorderLayout.CENTER);
+        add(left,BorderLayout.LINE_START);
+        add(right,BorderLayout.LINE_END);
     }
-    public  void load()
+    public  void loopLearn()
     {
         if(index < tiengViet.size())
         {
-            btnGiaiThich.setVisible(true);
             System.out.println(index);
-            Card.getInstance().setAnh(tienganh.get(index));
+            Card.getInstance().setEng(tienganh.get(index));
             Card.getInstance().setViet(tiengViet.get(index));
-            Card.getInstance().setIconCard(null);
-            Card.getInstance().loadCard();
+
+            Card.getInstance().LoadDataItem();
+            Card.getInstance().showBtnEng();
             Card.getInstance().repaint();
-            Card.getInstance().hideExplan();
-            index ++;
         }
+    }
+    public void EndLearn()
+    {
+        Card.getInstance().setEng("Kết Thúc");
+        Card.getInstance().setViet("Kết Thúc");
+
+        Card.getInstance().LoadDataItem();
+        Card.getInstance().showBtnEng();
+        Card.getInstance().repaint();
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        btnGiaiThich.setVisible(false);
-        Card.getInstance().showExplan();
-        
+    public void actionPerformed(ActionEvent actionEvent) {
+        String cmd = actionEvent.getActionCommand();
+        if(cmd.equals("left"))
+        {
+            if(index >0)
+            {
+                index--;
+                loopLearn();
+            }
+        }else if(cmd.equals("right"))
+        {
+            if(index <tiengViet.size()-1)
+            {
+                index++;
+                loopLearn();
+            }
+            else  if (index == tiengViet.size()-1) EndLearn();
+        }
     }
 }

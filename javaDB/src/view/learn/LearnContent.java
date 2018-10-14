@@ -16,7 +16,8 @@ import javax.swing.JPanel;
  */
 public class LearnContent extends JPanel {
     private static LearnContent instance = null;
-   
+    public final int WIDTH_Content = 850;
+
     public static LearnContent getInstance()
     {
         if(instance == null)
@@ -26,6 +27,7 @@ public class LearnContent extends JPanel {
         }else 
             return instance;
     }
+
     private LearnContent()
     {
         init();
@@ -33,23 +35,12 @@ public class LearnContent extends JPanel {
     private void init()
     {
         setLayout(null);
-       
         setBackground(Color.white);
-        LearnWord.getInstance().setBounds(270
-                , 10, LearnWord.getInstance().WIDTH_, LearnWord.getInstance().HEIGHT_);
+        LearnWord.getInstance().setBounds(WIDTH_Content/2 - LearnWord.getInstance().WIDTH_ /2 - 30
+                , 30, LearnWord.getInstance().WIDTH_, LearnWord.getInstance().HEIGHT_);
         add(LearnWord.getInstance(),BorderLayout.CENTER);
         
         
     }
-    
-    
-    public static void main(String []args)
-    {
-        JFrame  fm = new JFrame();
-        fm.setLayout(new BorderLayout());
-        fm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fm.setSize(500, 500);
-        fm.add(LearnContent.getInstance(),BorderLayout.CENTER);
-        fm.setVisible(true);
-    }
+
 }

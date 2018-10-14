@@ -5,7 +5,7 @@
  */
 package view.exam;
 
-import java.awt.Color;
+import java.awt.*;
 import javax.swing.JPanel;
 
 /**
@@ -31,5 +31,7 @@ public class ExamContent extends JPanel{
     private void init()
     {
         setBackground(Color.white);
+        setLayout(new CardLayout());
+        add(ExamSelect.getInstance(),"EXAMSELECT");
     }
 }

@@ -6,13 +6,13 @@
 package view.learn;
 
 
-import java.awt.Color;
-import java.awt.Dimension;
+import view.search.BtnNone;
 
-import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
@@ -20,9 +20,12 @@ import javax.swing.border.LineBorder;
  *
  * @author Admin
  */
-public class Card extends JPanel{
+public class Card extends JPanel implements ActionListener {
     private static Card instance = null;
-    private final ImageIcon iconDefault = ImageSize.ImageSize(300, new ImageIcon("icons/default_card.png"));
+
+    private static BtnNone BtnViet =new BtnNone();
+    private static BtnNone BtnEng =new BtnNone();
+
     public static Card getInstance()
     {
         if(instance == null)
@@ -32,82 +35,75 @@ public class Card extends JPanel{
         }else 
             return instance;
     }
-    public ImageIcon icon;
-    public final int WIDTH_CARD =300;
-    public final int HEIGHT_CARD =420;
-    private String Anh;
-    private String Viet;
 
-   
+    public final int WIDTH_CARD =450;
+    public final int HEIGHT_CARD =450;
 
-    public void setIconCard(ImageIcon icon) {
-        if(icon ==null) this.icon = iconDefault;else 
-            this.icon = icon;
+    private String Eng;
+
+    public String getEng() {
+        return Eng;
     }
 
-    public String getAnh() {
-        return Anh;
-    }
-
-    public void setAnh(String Anh) {
-        this.Anh = Anh;
+    public void setEng(String eng) {
+        Eng = eng;
     }
 
     public String getViet() {
         return Viet;
     }
 
-    public void setViet(String Viet) {
-        this.Viet = Viet;
+    public void setViet(String viet) {
+        Viet = viet;
     }
-    private JLabel lblEng= new JLabel();
-    private JLabel lblIcon= new JLabel();
-    private JLabel lblVi= new JLabel();
-    
+
+    private String Viet;
+
+
      public Card(){
          init();
      }
+     public void LoadDataItem()
+     {
+         BtnEng.setText(Eng);
+         BtnViet.setText(Viet);
+     }
     
-    private void init()
-    {
-        BoxLayout box = new BoxLayout(this, BoxLayout.Y_AXIS);
-        setLayout(box);
-        
-        lblEng.setHorizontalAlignment(JLabel.CENTER);// căn giữa cho lblEng
-        lblVi.setHorizontalAlignment(JLabel.CENTER);// căn giữa cho lblVi  
-        
-        
-        
-        //icon = new ImageIcon("icons\\default_card.png");
-        setPreferredSize(new Dimension(WIDTH_CARD,HEIGHT_CARD));
-        add(lblIcon);
-        add(lblEng);
-        add(lblVi);
-        hideExplan();
-    }
-    public void loadCard()
-    {
-        lblEng.setText("<html><h1 style='color:gray'>"+Anh+"</h1></html>");
-        
-        
-        
-        lblVi.setText("<html><h1 style='color:gray'>"+Viet+"</h1></html>");
-              
-        lblEng.setHorizontalAlignment(JLabel.CENTER);// căn giữa cho lblEng
+     private void init()
+     {
+        setLayout(new CardLayout());
+        BtnViet.setBackground(Color.WHITE);
+        BtnViet.setForeground(Color.black);
+        BtnViet.setFont(new Font(Font.MONOSPACED, Font.BOLD,  35));
+        BtnViet.setActionCommand("VIET");
+        BtnViet.addActionListener(this);
 
-        
-        lblIcon.setIcon(icon);
-        lblIcon.setPreferredSize(new Dimension(200,200));
-        
-    }
-    public void hideExplan()
+        BtnEng.setBackground(Color.WHITE);
+        BtnEng.setFont(new Font(Font.MONOSPACED, Font.BOLD,  35));
+         BtnEng.setForeground(Color.BLACK);
+         BtnEng.setActionCommand("ENG");
+         BtnEng.addActionListener(this);
+        LoadDataItem();
+        add(BtnEng,"ENGLISH");
+        add(BtnViet,"VIETNAM");
+
+     }
+
+    public void showBtnEng()
     {
-        lblVi.setVisible(false);
+        CardLayout cardLayout = (CardLayout) getInstance().getLayout();
+        cardLayout.show(getInstance(),"ENGLISH");
     }
-    public void showExplan()
-    {
-        lblVi.setVisible(true);
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+        CardLayout cardLayout = (CardLayout) getInstance().getLayout();
+        String cmd =actionEvent.getActionCommand();
+         if(cmd.equals("VIET"))
+         {
+             cardLayout.show(getInstance(),"ENGLISH");
+         }else if(cmd.equals("ENG"))
+         {
+             cardLayout.show(getInstance(),"VIETNAM");
+         }
     }
-    
-    
 }

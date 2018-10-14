@@ -19,11 +19,13 @@ public class ContentAreaMenuMain extends JPanel{
      private static ContentAreaMenuMain instance = null;
 
     public static ContentAreaMenuMain getInstance() throws IOException {
-        if (null == instance) {
+        if (instance == null) {
             instance = new ContentAreaMenuMain();
+            return instance;
         }
         return instance;
     }
+
     protected ContentAreaMenuMain() throws IOException 
     {   
         setBackground(Color.WHITE);

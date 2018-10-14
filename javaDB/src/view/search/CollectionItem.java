@@ -40,10 +40,12 @@ public class CollectionItem extends JPanel{
         BoxLayout boxLayout = new BoxLayout(panel, BoxLayout.Y_AXIS);
         panel.setLayout(boxLayout);
         DictionaryManagement.getInstance();
+
         for(int i =0; i<Dictionary.getInstance().size(); i++)
         {
             panel.add(new ItemList(Dictionary.getInstance().get(i).getWord_target(),Dictionary.getInstance().get(i).getWord_explain(),i));
         }
+
         JScrollPane scrollPane = new JScrollPane(panel);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
