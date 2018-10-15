@@ -5,10 +5,11 @@
  */
 package view;
 
+import view.search.CollectionContent;
+
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.io.IOException;
-import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
@@ -31,8 +32,9 @@ public class ContentAreaMenuMain extends JPanel{
         setBackground(Color.WHITE);
         setLayout(new CardLayout());
         //add(new JButton("sasas"));
+
+        add(CollectionContent.getInstance(),"search");
         add(view.Card.CardContent.getInstance(),"ListCard");
-        add(view.search.CollectionItem.getInstance(),"search");
         add(view.learn.LearnContent.getInstance(),"learn");
         add(view.exam.ExamContent.getInstance(),"exam");
     }

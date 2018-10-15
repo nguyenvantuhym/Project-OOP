@@ -8,6 +8,7 @@ package Model;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Comparator;
 
 /**
  *
@@ -51,5 +52,34 @@ public class DictionaryManagement{
             System.out.println(e);
         }
     }
+    public void editWordByIndex(int index,String WordAnh,String WordViet)
+    {
+        if(index <Dictionary.getInstance().size()||index >-1)
+        {
+            Dictionary.getInstance().get(index).setWord_target(WordAnh);
+            Dictionary.getInstance().get(index).setWord_explain(WordViet);
+        }
+
+    }
+    public void deleteWordByIndex(int index)
+    {
+        if(index <Dictionary.getInstance().size()||index >-1)
+        Dictionary.getInstance().remove(index);
+    }
+    public void addWordInDictionary(String WordAnh,String WordViet)
+    {
+        Dictionary.getInstance().add(new Word(WordAnh,WordViet));
+        Dictionary.getInstance().sort(new SortbyWord());
+    }
    
+}
+
+class SortbyWord implements Comparator<Word>
+{
+    // Used for sorting in ascending order of
+    // roll number
+    public int compare(Word a, Word b)
+    {
+        return a.getWord_target().compareTo(b.getWord_target());
+    }
 }

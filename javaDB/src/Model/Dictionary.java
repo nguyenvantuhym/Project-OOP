@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class Dictionary extends ArrayList<Word>{
-    private static Dictionary instance = null;
+    protected static Dictionary instance = null;
     public static Dictionary getInstance()
     {
         if(instance ==null)

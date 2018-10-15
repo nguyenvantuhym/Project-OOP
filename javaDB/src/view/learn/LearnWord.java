@@ -15,6 +15,8 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
+
+import Model.FavoritesWordList;
 import view.search.BtnNone;
 
 /**
@@ -38,21 +40,11 @@ public class LearnWord extends JPanel implements ActionListener{
     public final int HEIGHT_ =Card.getInstance().HEIGHT_CARD;
     private BtnNone left = new BtnNone(new ImageIcon("icons/left.png"));
     private BtnNone right = new BtnNone(new ImageIcon("icons/right.png"));
-    ArrayList<String> tiengViet = new  ArrayList();
-    ArrayList<String> tienganh = new  ArrayList();
+
     int index =0;
     private void loaddata()
     {
-        tiengViet.add("gà");
-        tienganh.add("chicken");
-        tiengViet.add("chos");
-        tienganh.add("dog");
-        tiengViet.add("chim");
-        tienganh.add("bird");
-        tiengViet.add("cây");
-        tienganh.add("tree");
-        tiengViet.add("bút");
-        tienganh.add("pen");
+
     }
    
 
@@ -82,11 +74,11 @@ public class LearnWord extends JPanel implements ActionListener{
     }
     public  void loopLearn()
     {
-        if(index < tiengViet.size())
+        if(index < FavoritesWordList.getInstance().size())
         {
             System.out.println(index);
-            Card.getInstance().setEng(tienganh.get(index));
-            Card.getInstance().setViet(tiengViet.get(index));
+            Card.getInstance().setEng(FavoritesWordList.getInstance().get(index).getWord_target());
+            Card.getInstance().setViet(FavoritesWordList.getInstance().get(index).getWord_explain());
 
             Card.getInstance().LoadDataItem();
             Card.getInstance().showBtnEng();
@@ -115,12 +107,12 @@ public class LearnWord extends JPanel implements ActionListener{
             }
         }else if(cmd.equals("right"))
         {
-            if(index <tiengViet.size()-1)
+            if(index <FavoritesWordList.getInstance().size()-1)
             {
                 index++;
                 loopLearn();
             }
-            else  if (index == tiengViet.size()-1) EndLearn();
+            else  if (index == FavoritesWordList.getInstance().size()-1) EndLearn();
         }
     }
 }
